@@ -1,10 +1,10 @@
-package DemoPack;
+package DemoPac3;
 
 import org.testng.annotations.Test;
 
-public class CreateProjectTest {
+public class DeeleTest {
 	@Test
-	public void createTest() {
+	public void detMeTest() {
 		System.out.println("Run");
 		System.out.println(System.getProperty("browser"));
 		System.out.println(System.getProperty("url"));

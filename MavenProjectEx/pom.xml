@@ -4,6 +4,7 @@
   <artifactId>MavenProjectEx</artifactId>
   <version>0.0.1-SNAPSHOT</version>
    <profiles>
+   
   <profile>
   <id>RT</id>
    <build>
@@ -14,7 +15,7 @@
         <version>2.18.1</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>RTTest.xml</suiteXmlFile>
+            <suiteXmlFile>RegressionTest.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
@@ -32,16 +33,34 @@
         <version>2.18.1</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>STTest.xml</suiteXmlFile>
+            <suiteXmlFile>SmokeTest.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
 </plugins>
 </build>
   </profile>
-  </profiles>
+  
 
- 
+ <profile>
+  <id>BT</id>
+   <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.18.1</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>BatchExecutionTest.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+</plugins>
+</build>
+  </profile>
+</profiles>
+  
   <dependencies>
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>

@@ -1,10 +1,10 @@
-package DemoPack;
+package DemoPck2;
 
 import org.testng.annotations.Test;
 
-public class CreateProjectTest {
+public class ConfigTest {
 	@Test
-	public void createTest() {
+	public void cofigMeTest() {
 		System.out.println("Run");
 		System.out.println(System.getProperty("browser"));
 		System.out.println(System.getProperty("url"));
